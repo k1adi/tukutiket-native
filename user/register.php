@@ -6,7 +6,6 @@
 	<?php include '../template/temp_head.php'; ?>
 
 	<title>Tukutiket - Register</title>
-	<link rel="stylesheet" href="">
 </head>
 <body>
 
@@ -20,6 +19,7 @@
 	<!-- Navbar -->
 	<?php include'../template/temp_navbar.php' ?>
 
+	<!-- Form Register -->
 	<div class="card mx-auto mt-4" style="width: 35rem;">
 		<h5 class="card-header bg-light text-secondary text-center">
 			Register
