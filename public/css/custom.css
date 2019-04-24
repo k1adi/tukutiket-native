@@ -30,3 +30,53 @@
 .page-title{
 	font-size: 22px;
 }
+.image-kereta{
+	background-image: url('../images/kereta.png');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.image-pesawat{
+	background-image: url('../images/pesawat.png');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.fa-facebook:hover,
+.fa-twitter:hover, 
+.fa-instagram:hover{
+	transition: all .6s ease;
+	cursor: pointer;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-instagram{
+	transition: all .8s ease;
+}
+.fa-facebook:hover{
+	color: 	#3b5998;
+}
+.fa-twitter:hover{
+	color: #00aced;
+}
+.fa-instagram:hover{
+	color: #bc2a8d;
+}
+.fa-linkedin:hover{
+	color: #007bb6;
+}
+.txt-small{
+	font-size:12px;
+}
+.card-cstm:hover{
+	border: solid dodgerblue 1px;
+	cursor: pointer;
+}
+.mt-cstm{
+	margin-top:37px;
+}
+.timeline{
+	border-left:solid 1px dodgerblue;
+}
