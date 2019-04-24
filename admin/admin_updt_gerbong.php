@@ -43,12 +43,12 @@
 						$koneksi = open_connection();
 
 						$id = $_GET['id'];
-						$query = "SELECT * FROM `gerbong` WHERE id = $id";
+						$query = "SELECT * FROM `gerbong` WHERE id_gerbong = $id";
 						$sql = mysqli_query($koneksi, $query) or die (mysqli_error($koneksi));
 						$data = mysqli_fetch_assoc($sql)
 						?>
 						<form action="../function/proccess_updt_gerbong.php" method="POST">
-							<input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+							<input type="hidden" name="id" value="<?php echo $data['id_gerbong']; ?>">
 						  <div class="form-group row">
 						  	<div class="col">
 							    <label>Kelas </label>
@@ -91,17 +91,17 @@
 		
 				if(isset($_POST['update'])){
 
-					$id = $_POST['id'];
+					$id = $_POST['id_gerbong'];
 					$kelas = $_POST['kelas'];
 					$jml_kursi = $_POST['jml_kursi'];
 					$harga = $_POST['harga'];
 					$kereta = $_POST['kereta'];
 
-					$find_id = mysqli_query($koneksi, "SELECT id FROM `kereta` WHERE nama_kereta = '$kereta'");
+					$find_id = mysqli_query($koneksi, "SELECT id_kereta FROM `kereta` WHERE nama_kereta = '$kereta'");
 					$kereta = mysqli_fetch_assoc($find_id);
-					$id_kereta = $kereta['id'];
+					$id_kereta = $kereta['id_kereta'];
 
-					$update = mysqli_query($koneksi, "UPDATE `gerbong` SET jumlah_kursi='$jml_kursi',harga='$harga', kelas='$kelas',id_kereta='$id_kereta' WHERE id=$id");
+					$update = mysqli_query($koneksi, "UPDATE `gerbong` SET jumlah_kursi='$jml_kursi',harga='$harga', kelas='$kelas',id_kereta='$id_kereta' WHERE id_gerbong=$id");
 				?>
 
 					<script type="text/javascript">

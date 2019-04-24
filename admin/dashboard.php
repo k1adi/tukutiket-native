@@ -14,7 +14,7 @@
 		echo '<script type="text/javascript">';
 		echo 'alert("Anda Tidak Punya Akses");';
 		echo '</script>';
-		echo '<meta http-equiv="refresh" content="0;url=index.php" />';
+		echo '<meta http-equiv="refresh" content="0;url=../index.php" />';
 		}
 	?>
 

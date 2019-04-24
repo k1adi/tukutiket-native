@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 	
@@ -96,7 +96,7 @@
 						<?php
 
 							$i = 1;
-							$query = "SELECT * FROM `kereta` INNER JOIN gerbong ON kereta.id = gerbong.id_kereta";
+							$query = "SELECT * FROM `gerbong` JOIN `kereta` ON gerbong.id_kereta = kereta.id_kereta";
 							$sql = mysqli_query($koneksi, $query) or die (mysqli_error($koneksi));
 							$cek = mysqli_num_rows($sql);
 							if($cek > 0){
@@ -107,12 +107,12 @@
 								echo "<td>".$data['jumlah_kursi']."</td>";
 								echo "<td>".$data['harga']."</td>";
 								echo "<td>".$data['nama_kereta']."</td>";
-								echo "<td><a href='../admin/admin_updt_gerbong.php?id=$data[id]' class='btn btn-success btn-sm'>ubah</a> ";
-								echo "<a href='..function/del_gerbong.php?id=$data[id]' class='btn btn-danger btn-sm'>hapus</a></td>";
+								echo "<td><a href='../admin/admin_updt_gerbong.php?id=$data[id_gerbong]' class='btn btn-success btn-sm'>ubah</a> ";
+								echo "<a href='..function/del_gerbong.php?id=$data[id_gerbong]' class='btn btn-danger btn-sm'>hapus</a></td>";
 								echo "</tr>";
 							}
 						} else {
-							echo "<tr><td colspan='6' class='text-center'>No Data In This Tables</td></tr>";
+							echo "<tr><td colspan='6' class='text-center'>Not Found Data In This Tables</td></tr>";
 						}
 						?>
 					</tbody>

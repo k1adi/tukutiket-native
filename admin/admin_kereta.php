@@ -72,7 +72,7 @@
 								echo "<tr>";
 								echo "<td>". $i++ ."</td>";
 								echo "<td>". $data['nama_kereta'] ."</td>";
-								echo "<td><a href='../function/del_kereta.php?id=$data[id]' class='btn btn-danger btn-sm'>hapus</a></td>";
+								echo "<td><a href='../function/del_kereta.php?id=$data[id_kereta]' class='btn btn-danger btn-sm'>hapus</a></td>";
 								echo "</tr>";	
 							}
 							}else {

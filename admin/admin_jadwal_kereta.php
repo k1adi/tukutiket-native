@@ -127,7 +127,7 @@
 
 							// $sql = "SELECT * FROM `jadwal_kereta`";
 							$i = 1;
-							$query = "SELECT * FROM `kereta` INNER JOIN jadwal_kereta ON jadwal_kereta.id_kereta = kereta.id";
+							$query = "SELECT * FROM `jadwal_kereta` INNER JOIN `kereta` ON jadwal_kereta.id_kereta = kereta.id_kereta";
 							$sql = mysqli_query($koneksi, $query) or die (mysqli_error($koneksi));
 							// var_dump($query);
 							$cek = mysqli_num_rows($sql);
@@ -142,8 +142,8 @@
 									echo "<td>" .$data['nama_kereta']. "</td>";
 									echo "<td>" .$data['jam_berangkat']. "</td>";
 									echo "<td>" .$data['jam_tiba']. "</td>";
-									echo "<td><a href='../function/updt_jadwal_kereta.php?id=$data[id]' class='btn btn-success btn-sm'>ubah</a> ";
-									echo "<a href='../function/del_jadwal_kereta.php?id=$data[id]' class='btn btn-danger btn-sm'>hapus</a></td>";
+									echo "<td><a href='../function/updt_jadwal_kereta.php?id=$data[id_jadwal]' class='btn btn-success btn-sm'>ubah</a> ";
+									echo "<a href='../function/del_jadwal_kereta.php?id=$data[id_jadwal]' class='btn btn-danger btn-sm'>hapus</a></td>";
 									echo "</tr>";
 								}
 							} else {
