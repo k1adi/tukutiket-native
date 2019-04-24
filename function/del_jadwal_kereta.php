@@ -4,7 +4,7 @@ include 'koneksi.php';
 $koneksi = open_connection();
 
 $id = $_GET['id'];
-$query = "DELETE FROM `jadwal_kereta` WHERE id = $id";
+$query = "DELETE FROM `jadwal_kereta` WHERE id_jadwal = $id";
 $sql = mysqli_query($koneksi, $query) or die (mysqli_query($koneksi));
 
 ?>

@@ -11,11 +11,11 @@
 		$harga = $_POST['harga'];
 		$kereta = $_POST['kereta'];
 
-		$find_id = mysqli_query($koneksi, "SELECT id FROM `kereta` WHERE nama_kereta = '$kereta'");
+		$find_id = mysqli_query($koneksi, "SELECT id_kereta FROM `kereta` WHERE nama_kereta = '$kereta'");
 		$kereta = mysqli_fetch_assoc($find_id);
 		$id_kereta = $kereta['id'];
 
-		$update = mysqli_query($koneksi, "UPDATE `gerbong` SET jumlah_kursi='$jml_kursi',harga='$harga', kelas='$kelas',id_kereta='$id_kereta' WHERE id='$id'");
+		$update = mysqli_query($koneksi, "UPDATE `gerbong` SET jumlah_kursi='$jml_kursi',harga='$harga', kelas='$kelas',id_kereta='$id_kereta' WHERE id_gerbong='$id'");
 ?>
 
 		<script type="text/javascript">

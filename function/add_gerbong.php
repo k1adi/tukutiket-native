@@ -9,9 +9,9 @@ if(isset($_POST['submit'])){
 	$harga = $_POST['harga'];
 	$kereta = $_POST['kereta'];
 
-	$find_id = mysqli_query($koneksi, "SELECT id FROM `kereta` WHERE nama_kereta = '$kereta'");
+	$find_id = mysqli_query($koneksi, "SELECT id_kereta FROM `kereta` WHERE nama_kereta = '$kereta'");
 	$data = mysqli_fetch_assoc($find_id);
-	$id_kereta = $data['id'];
+	$id_kereta = $data['id_kereta'];
 	// var_dump($id_kereta);
 
 	$query = "INSERT INTO `gerbong` (jumlah_kursi,harga,kelas,id_kereta) VALUES ('$jml_kursi', $harga, '$kelas', '$id_kereta')";
